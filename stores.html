@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>门店分布 - 元膳家 | 68家门店遍布广佛</title>
+    <meta name="description" content="元膳家线下门店68家，以广州、佛山为核心辐射珠三角地区。社区档口、写字楼快餐、商超店多种业态，68家成功门店经验复制，诚邀加盟。">
+    <meta name="keywords" content="元膳家门店,元膳家地址,元膳家广州门店,元膳家佛山门店">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --gold: #d4af37;
+            --gold-light: #f4d03f;
+            --dark: #0d0d0d;
+            --gray: #666;
+            --light: #f8f9fa;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            color: #333;
+        }
+        
+        .navbar {
+            background: var(--dark) !important;
+            padding: 15px 0;
+        }
+        
+        .navbar-brand {
+            color: var(--gold) !important;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .nav-link {
+            color: #fff !important;
+            margin: 0 15px;
+        }
+        
+        .nav-link:hover {
+            color: var(--gold) !important;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--dark) 0%, #2a2a2a 100%);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .page-header p {
+            font-size: 18px;
+            color: #ccc;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 30px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: var(--gray);
+            font-size: 16px;
+        }
+        
+        .city-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        
+        .city-card h3 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .store-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .store-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .store-item:last-child {
+            border-bottom: none;
+        }
+        
+        .store-name {
+            font-weight: 500;
+            color: var(--primary);
+        }
+        
+        .store-address {
+            color: var(--gray);
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        
+        .case-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            height: 100%;
+        }
+        
+        .case-image {
+            height: 200px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+        }
+        
+        .case-content {
+            padding: 25px;
+        }
+        
+        .case-content h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .case-data {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        
+        .case-data-item {
+            text-align: center;
+        }
+        
+        .case-data-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--gold);
+        }
+        
+        .case-data-label {
+            font-size: 12px;
+            color: var(--gray);
+            margin-top: 5px;
+        }
+        
+        .case-story {
+            color: var(--gray);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        .testimonial-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            height: 100%;
+        }
+        
+        .testimonial-quote {
+            font-size: 40px;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-text {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: var(--dark);
+            font-weight: bold;
+        }
+        
+        .testimonial-info h4 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 3px;
+            color: var(--primary);
+        }
+        
+        .testimonial-info p {
+            font-size: 13px;
+            color: var(--gray);
+            margin: 0;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--dark) 0%, #2a2a2a 100%);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 40px;
+        }
+        
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            color: var(--dark);
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            color: var(--dark);
+        }
+        
+        .footer {
+            background: var(--dark);
+            color: #999;
+            padding: 50px 0 20px;
+        }
+        
+        .footer h4 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer li {
+            margin-bottom: 10px;
+        }
+        
+        .footer a {
+            color: #999;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            color: var(--gold);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">元膳家</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">品牌故事</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">产品展示</a></li>
+                    <li class="nav-item"><a class="nav-link" href="franchise.html">加盟政策</a></li>
+                    <li class="nav-item"><a class="nav-link" href="stores.html">门店分布</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>门店分布</h1>
+            <p>68家门店遍布广佛，每一家都是成功的见证</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <div class="stat-number">68</div>
+                        <div class="stat-label">家连锁门店</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">个核心城市</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">种门店业态</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">存活率</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>重点门店</h2>
+                <p>欢迎实地考察，眼见为实</p>
+            </div>
+            
+            <div class="city-card">
+                <h3>🏙️ 广州地区</h3>
+                <ul class="store-list">
+                    <li class="store-item">
+                        <div>
+                            <div class="store-name">元膳家（天河客运站店）</div>
+                            <div class="store-address">天河区上元岗大街1号</div>
+                        </div>
+                        <span class="badge bg-secondary">档口店</span>
+                    </li>
+                    <li class="store-item">
+                        <div>
+                            <div class="store-name">元膳家（海珠赤岗店）</div>
+                            <div class="store-address">海珠区赤岗路</div>
+                        </div>
+                        <span class="badge bg-secondary">档口店</span>
+                    </li>
+                    <li class="store-item">
+                        <div>
+                            <div class="store-name">元膳家（番禺市桥店）</div>
+                            <div class="store-address">番禺区市桥街道</div>
+                        </div>
+                        <span class="badge bg-secondary">堂食店</span>
+                    </li>
+                    <li class="store-item">
+                        <div>
+                            <div class="store-name">元膳家（白云同和店）</div>
+                            <div class="store-address">白云区同和街</div>
+                        </div>
+                        <span class="badge bg-secondary">档口店</span>
+                    </li>
+                    <li class="store-item">
+                        <div>
+                            <div class="store-name">元膳家（黄埔大沙地店）</div>
+                            <div class="store-address">黄埔区大沙地</div>
+                        </div>
+                        <span class="badge bg-secondary">档口店</span>
+                    </li>
+                </ul>
+                <p style="text-align: center; color: var(--gray); margin-top: 20px; font-size: 14px;">
+                    广州地区共40+家门店，覆盖天河、海珠、番禺、白云、黄埔等区域
+                </p>
+            </div>
+            
+            <div class="city-card">
+                <h3>🏭 佛山地区</h3>
+                <ul class="store-list">
+                    <li class="store-item">
+                        <div>
+                            <div class="store-name">元膳家（南海桂城店）</div>
+                            <div class="store-address">南海区桂城街道</div>
+                        </div>
+                        <span class="badge bg-secondary">堂食店</span>
+                    </li>
+                    <li class="store-item">
+                        <div>
+                            <div class="store-name">元膳家（禅城祖庙店）</div>
+                            <div class="store-address">禅城区祖庙街道</div>
+                        </div>
+                        <span class="badge bg-secondary">档口店</span>
+                    </li>
+                    <li class="store-item">
+                        <div>
+                            <div class="store-name">元膳家（顺德大良店）</div>
+                            <div class="store-address">顺德区大良街道</div>
+                        </div>
+                        <span class="badge bg-secondary">档口店</span>
+                    </li>
+                    <li class="store-item">
+                        <div>
+                            <div class="store-name">元膳家（里水店）</div>
+                            <div class="store-address">南海区里水镇</div>
+                        </div>
+                        <span class="badge bg-secondary">商超店</span>
+                    </li>
+                </ul>
+                <p style="text-align: center; color: var(--gray); margin-top: 20px; font-size: 14px;">
+                    佛山地区共20+家门店，覆盖南海、禅城、顺德等区域
+                </p>
+            </div>
+            
+            <p style="text-align: center; color: var(--gray); margin-top: 30px;">
+                * 以上为部分重点门店，完整门店列表请咨询加盟顾问
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>标杆门店案例</h2>
+                <p>真实数据，真实案例</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="case-card">
+                        <div class="case-image">🏪</div>
+                        <div class="case-content">
+                            <h3>天河客运站店</h3>
+                            <div class="case-data">
+                                <div class="case-data-item">
+                                    <div class="case-data-number">6000+</div>
+                                    <div class="case-data-label">日均营业额</div>
+                                </div>
+                                <div class="case-data-item">
+                                    <div class="case-data-number">4个月</div>
+                                    <div class="case-data-label">回本周期</div>
+                                </div>
+                            </div>
+                            <p class="case-story">
+                                位于天河客运站商圈，人流密集，主打上班族快餐。15㎡档口店，夫妻二人经营，日均营业额6000+，高峰期排队不断。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="case-card">
+                        <div class="case-image">🏘️</div>
+                        <div class="case-content">
+                            <h3>番禺市桥店</h3>
+                            <div class="case-data">
+                                <div class="case-data-item">
+                                    <div class="case-data-number">4500+</div>
+                                    <div class="case-data-label">日均营业额</div>
+                                </div>
+                                <div class="case-data-item">
+                                    <div class="case-data-number">6个月</div>
+                                    <div class="case-data-label">回本周期</div>
+                                </div>
+                            </div>
+                            <p class="case-story">
+                                社区底商30㎡堂食店，周边居民区密集。午餐+晚餐+斩料外带三时段营收，复购率高，生意稳定。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="case-card">
+                        <div class="case-image">🛒</div>
+                        <div class="case-content">
+                            <h3>里水商超店</h3>
+                            <div class="case-data">
+                                <div class="case-data-item">
+                                    <div class="case-data-number">5000+</div>
+                                    <div class="case-data-label">日均营业额</div>
+                                </div>
+                                <div class="case-data-item">
+                                    <div class="case-data-number">5个月</div>
+                                    <div class="case-data-label">回本周期</div>
+                                </div>
+                            </div>
+                            <p class="case-story">
+                                大型商超内档口，自带流量。超市客流+周边上班族双客源，周末和节假日生意尤其火爆。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align: center; color: var(--gray); margin-top: 30px; font-size: 14px;">
+                * 以上为标杆门店数据，实际营收因位置、运营能力等因素而异
+            </p>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>加盟商心声</h2>
+                <p>听听他们怎么说</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text">
+                            之前在工厂打工，一直想自己做点小生意。对比了很多品牌，元膳家0加盟费的政策最实在。现在夫妻店，比打工强多了，时间也自由。
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">陈</div>
+                            <div class="testimonial-info">
+                                <h4>陈老板</h4>
+                                <p>天河客运站店 · 加盟2年</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text">
+                            最满意的是不用请师傅，省了一大笔人工成本。总部配送的半成品品质很稳定，顾客反馈都不错，复购率很高。
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">李</div>
+                            <div class="testimonial-info">
+                                <h4>李老板</h4>
+                                <p>番禺市桥店 · 加盟1年半</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"</div>
+                        <p class="testimonial-text">
+                            总部的线上运营帮了大忙，抖音、美团团购都是总部统一做，我们只管做好出品和服务。新店开业就有流量，不用自己慢慢熬。
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">王</div>
+                            <div class="testimonial-info">
+                                <h4>王老板</h4>
+                                <p>南海桂城店 · 加盟1年</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>想开店？先去门店看看</h2>
+            <p>欢迎实地考察任意一家门店，眼见为实</p>
+            <a href="contact.html" class="btn-gold">预约考察</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h4>元膳家</h4>
+                    <p>以家的标准，本分做饭。<br>广式现烤烧腊连锁品牌，8年深耕，68家门店见证。</p>
+                </div>
+                <div class="col-md-2">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="about.html">品牌故事</a></li>
+                        <li><a href="products.html">产品展示</a></li>
+                        <li><a href="franchise.html">加盟政策</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h4>更多</h4>
+                    <ul>
+                        <li><a href="stores.html">门店分布</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>加盟热线</h4>
+                    <p style="font-size: 24px; color: #d4af37; font-weight: bold;">400-xxx-xxxx</p>
+                    <p>广东元膳家食品有限公司</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 元膳家 版权所有 | 粤ICP备2026107307号</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
