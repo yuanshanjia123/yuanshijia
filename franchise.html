@@ -6,10 +6,10 @@
     <title>加盟政策 - 元膳家 | 0加盟费 整店输出 全程扶持</title>
     <meta name="description" content="元膳家烧腊加盟，0加盟费、0管理费、0培训费，整店输出模式，总部全程扶持。2000㎡中央工厂统一配送，无需大厨，3天即可开店。68家成功门店经验复制，诚邀加盟。">
     <meta name="keywords" content="元膳家加盟,元膳家加盟费,广式烧腊加盟,烧腊店加盟,烧鸭饭加盟,0加盟费餐饮,餐饮加盟">
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -28,325 +28,364 @@
       }
     }
     </script>
-    
+
     <style>
         :root {
             --primary: #1a1a1a;
             --gold: #d4af37;
-            --gold-light: #f4d03f;
+            --gold-light: #f0d78c;
             --dark: #0d0d0d;
             --gray: #666;
-            --light: #f8f9fa;
+            --light-gray: #f5f5f5;
         }
-        
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             color: #333;
+            line-height: 1.6;
         }
-        
+
         .navbar {
             background: var(--dark) !important;
             padding: 15px 0;
         }
-        
+
         .navbar-brand {
             color: var(--gold) !important;
             font-size: 24px;
             font-weight: bold;
         }
-        
+
         .nav-link {
             color: #fff !important;
             margin: 0 15px;
+            transition: color 0.3s;
         }
-        
+
         .nav-link:hover {
             color: var(--gold) !important;
         }
-        
-        .page-header {
+
+        .hero-banner {
             background: linear-gradient(135deg, var(--dark) 0%, #2a2a2a 100%);
             color: #fff;
             padding: 80px 0;
             text-align: center;
         }
-        
-        .page-header h1 {
+
+        .hero-banner h1 {
             font-size: 42px;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        
-        .page-header p {
-            font-size: 18px;
-            color: #ccc;
-        }
-        
-        .zero-fee-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-            color: var(--dark);
-            padding: 8px 25px;
-            border-radius: 30px;
-            font-size: 16px;
             font-weight: bold;
             margin-bottom: 20px;
         }
-        
+
+        .hero-banner h1 span {
+            color: var(--gold);
+        }
+
+        .hero-banner p {
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        .zero-fee-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .zero-fee-item {
+            text-align: center;
+        }
+
+        .zero-fee-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .zero-fee-label {
+            font-size: 16px;
+            color: #ccc;
+            margin-top: 5px;
+        }
+
         .section {
             padding: 80px 0;
         }
-        
+
         .section-title {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
-        
+
         .section-title h2 {
             font-size: 36px;
             font-weight: bold;
             color: var(--primary);
+            margin-bottom: 15px;
         }
-        
+
         .section-title p {
             color: var(--gray);
             font-size: 16px;
-            margin-top: 10px;
         }
-        
+
         .investment-card {
             background: #fff;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+            padding: 40px 30px;
             height: 100%;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid var(--gold);
         }
-        
+
+        .investment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+        }
+
         .investment-card h3 {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: bold;
-            margin-bottom: 25px;
             color: var(--primary);
+            margin-bottom: 10px;
             text-align: center;
         }
-        
+
+        .investment-total {
+            text-align: center;
+            font-size: 20px;
+            color: var(--gold);
+            font-weight: bold;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
         .investment-item {
             display: flex;
             justify-content: space-between;
             padding: 12px 0;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px dashed #eee;
         }
-        
+
         .investment-item:last-child {
             border-bottom: none;
-            font-weight: bold;
-            color: var(--gold);
-            font-size: 18px;
-            padding-top: 20px;
         }
-        
-        .support-card {
-            padding: 30px;
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            height: 100%;
-            transition: all 0.3s;
+
+        .investment-item-label {
+            color: #666;
         }
-        
-        .support-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-        }
-        
-        .support-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        
-        .support-card h3 {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 15px;
+
+        .investment-item-value {
+            font-weight: 600;
             color: var(--primary);
         }
-        
+
+        .support-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 3px 20px rgba(0,0,0,0.06);
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+            height: 100%;
+        }
+
+        .support-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .support-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .support-card h4 {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
         .support-card p {
             color: var(--gray);
-            line-height: 1.8;
+            font-size: 14px;
+            margin: 0;
         }
-        
+
         .process-step {
             text-align: center;
             position: relative;
+            padding: 20px;
         }
-        
+
         .step-number {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-            color: var(--dark);
+            background: var(--gold);
+            color: #fff;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 24px;
             font-weight: bold;
-            margin: 0 auto 20px;
+            margin: 0 auto 15px;
         }
-        
+
         .process-step h4 {
             font-size: 18px;
             font-weight: bold;
-            margin-bottom: 10px;
             color: var(--primary);
+            margin-bottom: 8px;
         }
-        
+
         .process-step p {
             color: var(--gray);
             font-size: 14px;
-            line-height: 1.6;
+            margin: 0;
         }
-        
+
+        .faq-section {
+            background: var(--light-gray);
+        }
+
         .faq-item {
             background: #fff;
             border-radius: 10px;
             margin-bottom: 15px;
             overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
         }
-        
+
         .faq-question {
             padding: 20px 25px;
-            font-weight: bold;
-            font-size: 16px;
+            font-weight: 600;
             color: var(--primary);
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: background 0.3s;
         }
-        
-        .faq-question::after {
-            content: '+';
-            font-size: 24px;
-            color: var(--gold);
-            font-weight: normal;
+
+        .faq-question:hover {
+            background: #fafafa;
         }
-        
+
         .faq-answer {
             padding: 0 25px 20px;
             color: var(--gray);
             line-height: 1.8;
-            display: none;
         }
-        
-        .faq-item.active .faq-answer {
-            display: block;
-        }
-        
-        .faq-item.active .faq-question::after {
-            content: '−';
-        }
-        
+
         .cta-section {
             background: linear-gradient(135deg, var(--dark) 0%, #2a2a2a 100%);
             color: #fff;
             padding: 80px 0;
             text-align: center;
         }
-        
+
         .cta-section h2 {
             font-size: 36px;
             font-weight: bold;
             margin-bottom: 20px;
         }
-        
+
+        .cta-section h2 span {
+            color: var(--gold);
+        }
+
         .cta-section p {
             font-size: 18px;
             color: #ccc;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
-        
+
         .btn-gold {
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            background: var(--gold);
             color: var(--dark);
             padding: 15px 40px;
-            font-size: 18px;
-            font-weight: bold;
-            border: none;
             border-radius: 50px;
+            font-weight: bold;
+            font-size: 18px;
+            border: none;
+            transition: all 0.3s;
             text-decoration: none;
             display: inline-block;
         }
-        
+
         .btn-gold:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            background: var(--gold-light);
+            transform: scale(1.05);
             color: var(--dark);
         }
-        
-        .advantage-banner {
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-            color: var(--dark);
-            padding: 40px 0;
-        }
-        
-        .advantage-item {
-            text-align: center;
-        }
-        
-        .advantage-number {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        .advantage-text {
-            font-size: 14px;
-            opacity: 0.9;
-        }
-        
+
         .footer {
             background: var(--dark);
             color: #999;
             padding: 50px 0 20px;
         }
-        
+
         .footer h4 {
-            color: #fff;
+            color: var(--gold);
             font-size: 18px;
             margin-bottom: 20px;
+            font-weight: bold;
         }
-        
-        .footer ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .footer li {
+
+        .footer p {
             margin-bottom: 10px;
+            font-size: 14px;
         }
-        
+
         .footer a {
             color: #999;
             text-decoration: none;
+            transition: color 0.3s;
         }
-        
+
         .footer a:hover {
             color: var(--gold);
         }
-        
+
         .footer-bottom {
             border-top: 1px solid #333;
             padding-top: 20px;
-            margin-top: 40px;
+            margin-top: 30px;
             text-align: center;
-            font-size: 14px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-banner h1 {
+                font-size: 28px;
+            }
+            .zero-fee-row {
+                gap: 20px;
+            }
+            .zero-fee-number {
+                font-size: 36px;
+            }
+            .section {
+                padding: 50px 0;
+            }
+            .section-title h2 {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- 导航栏 -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">元膳家</a>
@@ -358,7 +397,7 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">品牌故事</a></li>
                     <li class="nav-item"><a class="nav-link" href="products.html">产品展示</a></li>
-                    <li class="nav-item"><a class="nav-link" href="franchise.html">加盟政策</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="franchise.html">加盟政策</a></li>
                     <li class="nav-item"><a class="nav-link" href="stores.html">门店分布</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">联系我们</a></li>
                 </ul>
@@ -366,280 +405,293 @@
         </div>
     </nav>
 
-    <section class="page-header">
+    <!-- 0加盟费横幅 -->
+    <section class="hero-banner">
         <div class="container">
-            <div class="zero-fee-badge">🎉 真正0加盟费</div>
-            <h1>元膳家加盟政策</h1>
-            <p>整店输出 · 全程扶持 · 68家成功门店经验复制</p>
-        </div>
-    </section>
-
-    <section class="advantage-banner">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-md-3 col-6">
-                    <div class="advantage-item">
-                        <div class="advantage-number">0元</div>
-                        <div class="advantage-text">加盟费</div>
-                    </div>
+            <h1>元膳家 <span>0加盟费</span> 诚邀加盟</h1>
+            <p>整店输出 · 全程扶持 · 无需大厨 · 3天即可上手</p>
+            <div class="zero-fee-row">
+                <div class="zero-fee-item">
+                    <div class="zero-fee-number">0</div>
+                    <div class="zero-fee-label">元加盟费</div>
                 </div>
-                <div class="col-md-3 col-6">
-                    <div class="advantage-item">
-                        <div class="advantage-number">0元</div>
-                        <div class="advantage-text">管理费</div>
-                    </div>
+                <div class="zero-fee-item">
+                    <div class="zero-fee-number">0</div>
+                    <div class="zero-fee-label">元管理费</div>
                 </div>
-                <div class="col-md-3 col-6">
-                    <div class="advantage-item">
-                        <div class="advantage-number">0元</div>
-                        <div class="advantage-text">培训费</div>
-                    </div>
+                <div class="zero-fee-item">
+                    <div class="zero-fee-number">0</div>
+                    <div class="zero-fee-label">元培训费</div>
                 </div>
-                <div class="col-md-3 col-6">
-                    <div class="advantage-item">
-                        <div class="advantage-number">3天</div>
-                        <div class="advantage-text">即可上手</div>
-                    </div>
+                <div class="zero-fee-item">
+                    <div class="zero-fee-number">3</div>
+                    <div class="zero-fee-label">天上手开店</div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- 投资预算明细 -->
     <section class="section">
         <div class="container">
             <div class="section-title">
                 <h2>投资预算明细</h2>
-                <p>透明公开，没有隐形消费</p>
+                <p>透明公开，无隐形收费，让你明明白白开店</p>
             </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-5">
+            <div class="row g-4">
+                <!-- 档口店 -->
+                <div class="col-md-6">
                     <div class="investment-card">
-                        <h3>15㎡档口店</h3>
+                        <h3>档口店（15㎡）</h3>
+                        <div class="investment-total">总投资：5-8万元</div>
                         <div class="investment-item">
-                            <span>品牌保证金</span>
-                            <span>5,000-10,000元</span>
+                            <span class="investment-item-label">装修费用</span>
+                            <span class="investment-item-value">约2万元</span>
                         </div>
                         <div class="investment-item">
-                            <span>整套设备</span>
-                            <span>4.5-7万元</span>
+                            <span class="investment-item-label">设备费用</span>
+                            <span class="investment-item-value">约1万元</span>
                         </div>
                         <div class="investment-item">
-                            <span>门店装修</span>
-                            <span>2-3万元</span>
+                            <span class="investment-item-label">首批原材料</span>
+                            <span class="investment-item-value">约1-1.5万元</span>
                         </div>
                         <div class="investment-item">
-                            <span>首批原材料</span>
-                            <span>2.5-4万元</span>
+                            <span class="investment-item-label">房租（月付）</span>
+                            <span class="investment-item-value">约4000元/月</span>
                         </div>
                         <div class="investment-item">
-                            <span>房租+流动资金</span>
-                            <span>3-5万元</span>
+                            <span class="investment-item-label">证照及流动资金</span>
+                            <span class="investment-item-value">约0.6-1.5万元</span>
                         </div>
-                        <div class="investment-item">
-                            <span>总投资</span>
-                            <span>12-18万元</span>
+                        <div class="investment-item" style="border-bottom: none; margin-top: 15px; padding-top: 15px; border-top: 2px solid #f0f0f0;">
+                            <span class="investment-item-label" style="font-weight: bold; color: #333;">总投资</span>
+                            <span class="investment-item-value" style="color: var(--gold); font-size: 18px;">5-8万元</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-5">
+                <!-- 堂食店 -->
+                <div class="col-md-6">
                     <div class="investment-card">
-                        <h3>30㎡堂食店</h3>
+                        <h3>堂食店（30㎡+）</h3>
+                        <div class="investment-total">总投资：10-15万元</div>
                         <div class="investment-item">
-                            <span>品牌保证金</span>
-                            <span>5,000-10,000元</span>
+                            <span class="investment-item-label">装修费用</span>
+                            <span class="investment-item-value">约4-6万元</span>
                         </div>
                         <div class="investment-item">
-                            <span>整套设备</span>
-                            <span>6-9万元</span>
+                            <span class="investment-item-label">设备费用</span>
+                            <span class="investment-item-value">约2-3万元</span>
                         </div>
                         <div class="investment-item">
-                            <span>门店装修</span>
-                            <span>4-6万元</span>
+                            <span class="investment-item-label">首批原材料</span>
+                            <span class="investment-item-value">约1.5-2.5万元</span>
                         </div>
                         <div class="investment-item">
-                            <span>首批原材料</span>
-                            <span>3-5万元</span>
+                            <span class="investment-item-label">房租（押一付三）</span>
+                            <span class="investment-item-value">约1.5-2.5万元</span>
                         </div>
                         <div class="investment-item">
-                            <span>房租+流动资金</span>
-                            <span>5-8万元</span>
+                            <span class="investment-item-label">证照及流动资金</span>
+                            <span class="investment-item-value">约1-1万元</span>
                         </div>
-                        <div class="investment-item">
-                            <span>总投资</span>
-                            <span>18-25万元</span>
+                        <div class="investment-item" style="border-bottom: none; margin-top: 15px; padding-top: 15px; border-top: 2px solid #f0f0f0;">
+                            <span class="investment-item-label" style="font-weight: bold; color: #333;">总投资</span>
+                            <span class="investment-item-value" style="color: var(--gold); font-size: 18px;">10-15万元</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <p style="text-align: center; color: var(--gray); margin-top: 30px; font-size: 14px;">
-                * 以上为预估费用，具体以实际情况为准。保证金合同到期无违规可退还。
-            </p>
+            <div style="text-align: center; margin-top: 30px; color: #999; font-size: 14px;">
+                <p>* 以上为参考预算，具体费用因城市、地段、面积等因素有所不同</p>
+                <p>* 无加盟费、无保证金、无管理费，真正的低门槛创业</p>
+            </div>
         </div>
     </section>
 
-    <section class="section bg-light">
+    <!-- 八大扶持体系 -->
+    <section class="section" style="background: var(--light-gray);">
         <div class="container">
             <div class="section-title">
                 <h2>八大扶持体系</h2>
-                <p>从0到1，总部全程保驾护航</p>
+                <p>总部全程保驾护航，让你开店无忧</p>
             </div>
             <div class="row g-4">
-                <div class="col-md-3 col-6">
+                <div class="col-md-3 col-sm-6">
                     <div class="support-card">
                         <div class="support-icon">📍</div>
-                        <h3>选址评估</h3>
-                        <p>专业选址团队上门评估，帮你找到最合适的铺位，降低选址风险。</p>
+                        <h4>选址评估</h4>
+                        <p>专业团队实地考察，评估商圈客流，帮你选到好铺位</p>
                     </div>
                 </div>
-                <div class="col-md-3 col-6">
+                <div class="col-md-3 col-sm-6">
                     <div class="support-card">
                         <div class="support-icon">🎨</div>
-                        <h3>装修设计</h3>
-                        <p>统一VI设计，提供完整装修方案，保证品牌形象统一。</p>
+                        <h4>装修设计</h4>
+                        <p>统一VI形象，专业设计方案，直接照着装就行</p>
                     </div>
                 </div>
-                <div class="col-md-3 col-6">
+                <div class="col-md-3 col-sm-6">
                     <div class="support-card">
-                        <div class="support-icon">📚</div>
-                        <h3>技术培训</h3>
-                        <p>3-7天系统培训，产品制作、门店运营、销售技巧全涵盖。</p>
+                        <div class="support-icon">👨‍🍳</div>
+                        <h4>技术培训</h4>
+                        <p>3天标准化培训，无需大厨经验，人人都能学会</p>
                     </div>
                 </div>
-                <div class="col-md-3 col-6">
+                <div class="col-md-3 col-sm-6">
                     <div class="support-card">
                         <div class="support-icon">🎉</div>
-                        <h3>开业策划</h3>
-                        <p>专业开业活动方案，总部督导上门带店，确保开业即火爆。</p>
+                        <h4>开业策划</h4>
+                        <p>量身定制开业活动方案，总部团队上门带店</p>
                     </div>
                 </div>
-                <div class="col-md-3 col-6">
+                <div class="col-md-3 col-sm-6">
                     <div class="support-card">
                         <div class="support-icon">🚚</div>
-                        <h3>物流配送</h3>
-                        <p>2000㎡中央工厂统一生产，冷链配送到店，品质稳定有保障。</p>
+                        <h4>物流配送</h4>
+                        <p>2000㎡中央工厂，冷链统一配送，品质有保障</p>
                     </div>
                 </div>
-                <div class="col-md-3 col-6">
+                <div class="col-md-3 col-sm-6">
                     <div class="support-card">
                         <div class="support-icon">📱</div>
-                        <h3>线上运营</h3>
-                        <p>总部统一运营抖音、美团等线上平台，团购套餐直接引流到店。</p>
+                        <h4>线上运营</h4>
+                        <p>抖音、美团统一运营，总部帮你做线上流量</p>
                     </div>
                 </div>
-                <div class="col-md-3 col-6">
+                <div class="col-md-3 col-sm-6">
                     <div class="support-card">
-                        <div class="support-icon">👨‍💼</div>
-                        <h3>运营督导</h3>
-                        <p>定期巡店督导，发现问题及时解决，持续优化门店运营。</p>
+                        <div class="support-icon">📊</div>
+                        <h4>运营督导</h4>
+                        <p>定期巡店督导，发现问题及时解决，持续提升业绩</p>
                     </div>
                 </div>
-                <div class="col-md-3 col-6">
+                <div class="col-md-3 col-sm-6">
                     <div class="support-card">
-                        <div class="support-icon">🔄</div>
-                        <h3>产品更新</h3>
-                        <p>持续研发新品，保持产品竞争力，让顾客常来常新。</p>
+                        <div class="support-icon">🆕</div>
+                        <h4>产品更新</h4>
+                        <p>持续研发新品，保持竞争力，让顾客常来常新</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- 加盟流程 -->
     <section class="section">
         <div class="container">
             <div class="section-title">
                 <h2>加盟流程</h2>
-                <p>简单6步，轻松开店</p>
+                <p>6步轻松开店，全程有人带</p>
             </div>
             <div class="row g-4">
-                <div class="col-md-2 col-4">
+                <div class="col-md-2 col-sm-4 col-6">
                     <div class="process-step">
                         <div class="step-number">1</div>
                         <h4>咨询了解</h4>
-                        <p>电话或留言咨询，了解品牌和加盟政策</p>
+                        <p>电话咨询<br>了解项目</p>
                     </div>
                 </div>
-                <div class="col-md-2 col-4">
+                <div class="col-md-2 col-sm-4 col-6">
                     <div class="process-step">
                         <div class="step-number">2</div>
                         <h4>实地考察</h4>
-                        <p>到总部和门店实地考察，品尝产品，了解运营</p>
+                        <p>总部考察<br>门店参观</p>
                     </div>
                 </div>
-                <div class="col-md-2 col-4">
+                <div class="col-md-2 col-sm-4 col-6">
                     <div class="process-step">
                         <div class="step-number">3</div>
                         <h4>签订合同</h4>
-                        <p>确认合作意向，签订加盟合同，缴纳保证金</p>
+                        <p>确认合作<br>签约授权</p>
                     </div>
                 </div>
-                <div class="col-md-2 col-4">
+                <div class="col-md-2 col-sm-4 col-6">
                     <div class="process-step">
                         <div class="step-number">4</div>
                         <h4>选址装修</h4>
-                        <p>总部协助选址，提供装修方案，开始装修</p>
+                        <p>店铺选址<br>装修施工</p>
                     </div>
                 </div>
-                <div class="col-md-2 col-4">
+                <div class="col-md-2 col-sm-4 col-6">
                     <div class="process-step">
                         <div class="step-number">5</div>
                         <h4>培训开业</h4>
-                        <p>参加技术培训，设备进场，准备开业</p>
+                        <p>技术培训<br>设备进场</p>
                     </div>
                 </div>
-                <div class="col-md-2 col-4">
+                <div class="col-md-2 col-sm-4 col-6">
                     <div class="process-step">
                         <div class="step-number">6</div>
                         <h4>正式营业</h4>
-                        <p>开业活动策划，督导上门带店，正式营业</p>
+                        <p>开业活动<br>持续扶持</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section bg-light">
+    <!-- FAQ常见问题 -->
+    <section class="section faq-section">
         <div class="container">
             <div class="section-title">
                 <h2>常见问题</h2>
-                <p>你关心的问题，我们都有答案</p>
+                <p>你最关心的问题，我们都有答案</p>
             </div>
             <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="faq-item active">
-                        <div class="faq-question">元膳家加盟费是多少？真的是0加盟费吗？</div>
+                <div class="col-lg-8">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>元膳家加盟费是多少？真的是0加盟费吗？</span>
+                            <span>+</span>
+                        </div>
                         <div class="faq-answer">
-                            是的，元膳家真正实行0加盟费政策，不收取加盟费、管理费、培训费。您只需要承担品牌保证金（合同到期无违规可退还）、设备、装修、首批原材料和房租等硬性支出。我们的盈利模式不是靠加盟费，而是靠供应链的规模效应，只有加盟商赚钱了，品牌才能长久发展。
+                            是的，元膳家真正实行0加盟费政策，不收取加盟费、管理费、培训费。我们的盈利模式不是靠赚加盟商的加盟费，而是通过供应链规模化采购降低成本，与加盟商实现共赢。你只需要承担装修、设备、首批原料和房租等硬性成本，没有任何隐形收费。
                         </div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question">没有餐饮经验可以做吗？需要请大厨吗？</div>
+                        <div class="faq-question">
+                            <span>没有餐饮经验可以做吗？需要请大厨吗？</span>
+                            <span>+</span>
+                        </div>
                         <div class="faq-answer">
-                            完全可以。元膳家采用标准化供应链模式，所有烧腊产品在中央工厂统一预制，冷链配送到店，门店只需要简单加热、斩件即可，不需要专业烧腊师傅，也不需要有餐饮经验。普通员工经过3-7天培训就能上手，夫妻二人就能看店，人工成本极低。
+                            完全可以做，不需要请大厨。元膳家所有烧腊产品都由中央工厂统一预制，冷链配送到店，门店只需要简单加热、切配就能出餐，操作非常简单。总部提供3天标准化培训，零基础也能快速上手，夫妻2人就能开店，大大节省人工成本。
                         </div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-item">
-                        <div class="faq-question">开店需要多大面积？回本周期大概多久？</div>
+                        <div class="faq-question">
+                            <span>开店需要多大面积？回本周期大概多久？</span>
+                            <span>+</span>
+                        </div>
                         <div class="faq-answer">
-                            15㎡即可开档口店，30㎡可以做带少量堂食的店。根据68家门店的实际运营数据，位置好、运营得当的门店，日均营业额4000元以上，回本周期约5-6个月；一般位置的门店，日均营业额2500-3000元，回本周期约8-10个月。具体回本时间和位置、运营能力有关，建议您先实地考察几家门店再做决定。
+                            档口店15㎡左右就能开，堂食店建议30㎡以上。回本周期要看具体位置和经营情况，一般档口店日均营业额3000-5000元，正常经营5-8个月可以回本。我们有68家成功门店的运营经验，只要按照总部的方法做，盈利是有保障的。
                         </div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question">原材料必须从总部采购吗？价格比市场贵吗？</div>
+                        <div class="faq-question">
+                            <span>原材料必须从总部采购吗？价格比市场贵吗？</span>
+                            <span>+</span>
+                        </div>
                         <div class="faq-answer">
-                            是的，核心烧腊产品必须从总部统一采购，这是保证品质稳定和品牌口碑的基础。总部集中采购、规模化生产，虽然比您自己买生鲜贵一些，但省了人工、省了浪费、省了师傅工资，综合算下来成本其实更低，而且出品更稳定。传统烧腊店毛利约60-65%，但需要请师傅、自己烤制，人工成本高；我们的模式毛利约45-52%，但人工成本低很多，实际净利润并不差。
+                            核心烧腊产品必须从总部采购，这是为了保证口味统一和品质稳定。总部是集中规模化采购，加上自有工厂生产，价格比你自己在本地采购更有优势，而且省去了你自己找货源、品控的麻烦。其他辅料如蔬菜、米饭等可以在本地采购，灵活自由。
                         </div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question">总部有区域保护政策吗？</div>
+                        <div class="faq-question">
+                            <span>总部有区域保护政策吗？</span>
+                            <span>+</span>
+                        </div>
                         <div class="faq-answer">
-                            有的，我们有合理的区域保护政策，确保每家门店都有足够的客源空间。具体保护范围根据商圈类型、人口密度等因素确定，签约前会明确告知。我们不做疯狂开店、收割加盟费的快招模式，追求的是开一家、成一家，和加盟商长期共赢。
+                            有的，总部实行严格的区域保护政策，根据商圈人口和消费能力合理布局门店，确保每家店都有足够的客源空间，避免恶性竞争。具体保护范围会根据你所在区域的实际情况确定，签约前会明确告知。
                         </div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-question">元膳家有多少家门店？主要分布在哪里？</div>
+                        <div class="faq-question">
+                            <span>元膳家有多少家门店？主要分布在哪里？</span>
+                            <span>+</span>
+                        </div>
                         <div class="faq-answer">
-                            截至2026年，元膳家线下门店68家，以广州、佛山为核心，辐射珠三角地区。我们同时运营元膳家、元野家双品牌矩阵。建议您在加盟前，自行导航找3家开业半年以上的门店，在饭点蹲点看看客流、翻台、打包量，真实了解门店运营情况后再做决定。
+                            截至2026年，元膳家线下门店达68家，主要分布在广州、佛山等珠三角地区，涵盖社区店、写字楼店、商超店、工业区店等多种业态。欢迎你到我们的门店实地考察，看看真实的经营情况，眼见为实。
                         </div>
                     </div>
                 </div>
@@ -647,57 +699,46 @@
         </div>
     </section>
 
+    <!-- CTA区域 -->
     <section class="cta-section">
         <div class="container">
-            <h2>想开店？从咨询开始</h2>
-            <p>留下你的联系方式，我们的加盟顾问会尽快联系你</p>
-            <a href="contact.html" class="btn-gold">立即咨询</a>
+            <h2>想开店？<span>元膳家</span>帮你实现</h2>
+            <p>0加盟费 · 整店输出 · 全程扶持 · 68家成功经验复制</p>
+            <a href="contact.html" class="btn-gold">立即咨询加盟</a>
+            <p style="margin-top: 20px; font-size: 14px;">加盟热线：400-000-2848</p>
         </div>
     </section>
 
+    <!-- 页脚 -->
     <footer class="footer">
         <div class="container">
-            <div class="row g-4">
+            <div class="row">
                 <div class="col-md-4">
                     <h4>元膳家</h4>
-                    <p>以家的标准，本分做饭。<br>广式现烤烧腊连锁品牌，8年深耕，68家门店见证。</p>
+                    <p>以家的标准，本分做饭</p>
+                    <p>广式现烤烧腊连锁品牌</p>
+                    <p>8年深耕 · 68家门店 · 2000㎡中央工厂</p>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-4">
                     <h4>快速导航</h4>
-                    <ul>
-                        <li><a href="index.html">首页</a></li>
-                        <li><a href="about.html">品牌故事</a></li>
-                        <li><a href="products.html">产品展示</a></li>
-                        <li><a href="franchise.html">加盟政策</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-2">
-                    <h4>更多</h4>
-                    <ul>
-                        <li><a href="stores.html">门店分布</a></li>
-                        <li><a href="contact.html">联系我们</a></li>
-                    </ul>
+                    <p><a href="index.html">首页</a></p>
+                    <p><a href="about.html">品牌故事</a></p>
+                    <p><a href="products.html">产品展示</a></p>
+                    <p><a href="franchise.html">加盟政策</a></p>
+                    <p><a href="stores.html">门店分布</a></p>
+                    <p><a href="contact.html">联系我们</a></p>
                 </div>
                 <div class="col-md-4">
                     <h4>加盟热线</h4>
-                    <p style="font-size: 24px; color: #d4af37; font-weight: bold;">400-000-2848</p>
-                    <p>广东元膳家食品有限公司</p>
+                    <p style="color: var(--gold); font-size: 24px; font-weight: bold;">400-000-2848</p>
+                    <p>服务时间：9:00-21:00</p>
+                    <p>总部地址：广东省佛山市南海区金田食品工业园</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 元膳家 版权所有 | 粤ICP备2026107307号</p>
+                <p>© 2026 元膳家 版权所有 | 广东元膳家食品有限公司</p>
             </div>
         </div>
     </footer>
-
-    <script>
-        // FAQ 折叠功能
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const item = question.parentElement;
-                item.classList.toggle('active');
-            });
-        });
-    </script>
 </body>
 </html>
